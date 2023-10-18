@@ -1,0 +1,26 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "strict": true,
+    //"noImplicitAny": true,
+    "module": "ESNext",
+    "target": "ES6",
+    "importHelpers": true,
+    "allowJs": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "types": ["node", "jsdom"]
+  },
+  "include": ["vue-shims.d.ts", "src/**/*", "src/**/*.vue", "custom.d.ts", "src/*.ts", "src/*.vue"],
+  "exclude": ["node_modules"]
+}
